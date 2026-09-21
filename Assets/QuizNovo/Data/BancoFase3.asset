@@ -1,0 +1,59 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a5cda1789bcd7a1428f58c2027205a00, type: 3}
+  m_Name: BancoFase3
+  m_EditorClassIdentifier: 
+  questoes:
+  - pergunta: "Por que h\xE1 fluxo de ar para os pulm\xF5es durante a inspira\xE7\xE3o?"
+    imagemAuxiliar: {fileID: 21300000, guid: d3ae3c881d3b75142b0738229186a163, type: 3}
+    alternativaA: "Porque a press\xE3o alveolar fica menor que a press\xE3o atmosf\xE9rica"
+    alternativaB: "Porque o diafragma comprime os pulm\xF5es"
+    alternativaC: "Porque a press\xE3o alveolar fica maior que a press\xE3o atmosf\xE9rica"
+    alternativaD: Porque a intrapleural fica positiva
+    indiceAlternativaCorreta: 0
+    justificativa: "O fluxo de ar ocorre porque a press\xE3o alveolar fica ligeiramente
+      menor que a press\xE3o atmosf\xE9rica, criando um gradiente de press\xE3o que
+      favorece a entrada de ar."
+  - pergunta: "Na expira\xE7\xE3o tranquila, qual evento \xE9 o principal respons\xE1vel
+      pelo fluxo de ar para fora dos pulm\xF5es?"
+    imagemAuxiliar: {fileID: 0}
+    alternativaA: "Contra\xE7\xE3o ativa dos intercostais internos"
+    alternativaB: "Relaxamento do diafragma e predom\xEDnio do recolhimento el\xE1stico
+      pulmonar"
+    alternativaC: "Aumento da press\xE3o intrapleural para valores positivos"
+    alternativaD: "Contra\xE7\xE3o do diafragma elevando a press\xE3o alveolar"
+    indiceAlternativaCorreta: 1
+    justificativa: "Na expira\xE7\xE3o basal, o processo \xE9 passivo. O relaxamento
+      do diafragma e dos intercostais externos permite que predomine o recolhimento
+      el\xE1stico pulmonar, reduzindo o volume pulmonar e promovendo a sa\xEDda de
+      ar."
+  - pergunta: "Qual valor melhor representa a press\xE3o intrapleural em repouso?"
+    imagemAuxiliar: {fileID: 21300000, guid: 7b549ab064f78cc45a84d823d71ee949, type: 3}
+    alternativaA: "0 cmH\u2082O"
+    alternativaB: "+1 cmH\u2082O"
+    alternativaC: "-5 cmH\u2082O"
+    alternativaD: "-1 cmH\u2082O"
+    indiceAlternativaCorreta: 2
+    justificativa: "A press\xE3o intrapleural \xE9 normalmente subatmosf\xE9rica,
+      apresentando um valor de aproximadamente \u22125 cmH\u2082O ao final de uma
+      expira\xE7\xE3o tranquila."
+  - pergunta: "Na inspira\xE7\xE3o tranquila, qual combina\xE7\xE3o \xE9 mais compat\xEDvel?
+      (Palv = press\xE3o alveolar; Ppl = press\xE3o pleural)"
+    imagemAuxiliar: {fileID: 21300000, guid: cd58d0c2b16326f4dbc9613130c259ae, type: 3}
+    alternativaA: "Palv = +1 cmH\u2082O e Ppl = 0 cmH\u2082O"
+    alternativaB: "Palv = -1 cmH\u2082O e Ppl = mais negativa que no repouso"
+    alternativaC: "Palv = 0 cmH\u2082O e Ppl = +5 cmH\u2082O"
+    alternativaD: "Palv = +2 cmH\u2082O e Ppl = -1 cmH\u2082O"
+    indiceAlternativaCorreta: 1
+    justificativa: "No in\xEDcio da inspira\xE7\xE3o, a press\xE3o intrapleural torna-se
+      mais negativa e a press\xE3o alveolar cai levemente, permitindo a entrada de
+      ar."

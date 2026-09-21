@@ -1,0 +1,44 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a5cda1789bcd7a1428f58c2027205a00, type: 3}
+  m_Name: BancoFase4
+  m_EditorClassIdentifier: 
+  questoes:
+  - pergunta: "Durante a fase, h\xE1 melhora da ventila\xE7\xE3o ap\xF3s a redu\xE7\xE3o
+      do volume do tecido adiposo, isso ocorre principalmente porque:"
+    imagemAuxiliar: {fileID: 21300000, guid: 51300b3f5187c6b43b2b89585478a634, type: 3}
+    alternativaA: "A press\xE3o alveolar torna-se mais negativa durante a inspira\xE7\xE3o,
+      facilitando a entrada de ar independentemente da a\xE7\xE3o diafragm\xE1tica"
+    alternativaB: "O diafragma recupera sua capacidade de gerar varia\xE7\xF5es de
+      press\xE3o, restabelecendo o volume corrente"
+    alternativaC: "A complac\xEAncia pulmonar aumenta diretamente"
+    alternativaD: "A resist\xEAncia das vias a\xE9reas \xE9 eliminada"
+    indiceAlternativaCorreta: 1
+    justificativa: "A restaura\xE7\xE3o do movimento diafragm\xE1tico permite gerar
+      gradientes de press\xE3o adequados, normalizando a ventila\xE7\xE3o."
+  - pergunta: "O aumento da press\xE3o intra-abdominal, decorrente do aumento do
+      tecido adiposo leva a:"
+    imagemAuxiliar: {fileID: 21300000, guid: b41f5498a80adac4f83e68d4aa9d9fea, type: 3}
+    alternativaA: "Redu\xE7\xE3o do trabalho respirat\xF3rio devido \xE0 estabiliza\xE7\xE3o
+      tor\xE1cica"
+    alternativaB: "Redu\xE7\xE3o da resist\xEAncia das vias a\xE9reas por aumento
+      do volume pulmonar"
+    alternativaC: "Aumento do trabalho respirat\xF3rio por eleva\xE7\xE3o da carga
+      el\xE1stica do sistema respirat\xF3rio"
+    alternativaD: "Aumento da efici\xEAncia ventilat\xF3ria devido ao melhor acoplamento
+      toracoabdominal"
+    indiceAlternativaCorreta: 2
+    justificativa: "O aumento da press\xE3o intra-abdominal imp\xF5e uma restri\xE7\xE3o
+      mec\xE2nica ao sistema respirat\xF3rio, elevando a elast\xE2ncia (carga el\xE1stica)
+      da parede tor\xE1cica. Isso reduz a complac\xEAncia e exige maior esfor\xE7o
+      dos m\xFAsculos respirat\xF3rios para gerar volumes ventilat\xF3rios adequados,
+      aumentando o trabalho respirat\xF3rio."

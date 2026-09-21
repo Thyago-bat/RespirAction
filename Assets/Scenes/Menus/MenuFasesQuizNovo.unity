@@ -3297,10 +3297,10 @@ MonoBehaviour:
   cenaPosterior: 
   cenaAnterior: MenuFasesNovo
   cenaBotao1: 
-  cenaBotao2: QuizSceneFase2
-  cenaBotao3: QuizSceneFase3
-  cenaBotao4: QuizSceneFase4
-  cenaBotao5: QuizSceneFase5
+  cenaBotao2: QuizNovoFase2
+  cenaBotao3: QuizNovoFase3
+  cenaBotao4: QuizNovoFase4
+  cenaBotao5: QuizNovoFase5
   cenaBotao6: 
 --- !u!1 &1228914046
 GameObject:
