@@ -135,5 +135,7 @@ EditorBuildSettings:
     path: Assets/Scenes/Quiz/QuizSceneFase5.unity
     guid: 660bc6c602c258143a9cf3faf55d1d38
   m_configObjects:
+    com.unity.addressableassets: {fileID: 11400000, guid: eade3c493f6139c4a841f040826afb36, type: 2}
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 052faaac586de48259a63d0c4782560b, type: 3}
+    com.unity.localization.settings: {fileID: 11400000, guid: 269459ed27563664b8d0643e73854684, type: 2}
   m_UseUCBPForAssetBundles: 0

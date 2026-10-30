@@ -12,7 +12,7 @@ public class TooltipManager2 : MonoBehaviour
 
     [Header("Tooltip UI")]
     [Tooltip("O objeto 'pai' do tooltip (que você desativou)")]
-    public GameObject tooltipObject; 
+    public GameObject tooltipObject;
     [Tooltip("O componente de texto do tooltip")]
     public TextMeshProUGUI tooltipText;
 
@@ -51,11 +51,13 @@ public class TooltipManager2 : MonoBehaviour
             if (part != null)
             {
                 // ACERTAMOS UMA PARTE INTERATIVA!
-                
+
                 // Ativa o objeto do tooltip
                 tooltipObject.SetActive(true);
-                // Define o texto
-                tooltipText.text = part.tooltipName;
+
+                // Define o texto no idioma selecionado no Localization
+                tooltipText.text = part.GetTooltipName();
+
                 // Posiciona o tooltip perto do mouse
                 // Adicionamos um pequeno offset para não ficar embaixo do cursor
                 tooltipObject.transform.position = Input.mousePosition + new Vector3(15, 15, 0);

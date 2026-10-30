@@ -466,7 +466,7 @@ VideoPlayer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 877972941}
   m_Enabled: 1
-  m_VideoClip: {fileID: 32900000, guid: 6a085a0659e34fa4eb4e808f4239695a, type: 3}
+  m_VideoClip: {fileID: 0}
   m_TargetCameraAlpha: 1
   m_TargetCamera3DLayout: 0
   m_TargetCamera: {fileID: 0}
@@ -522,6 +522,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   videoPlayer: {fileID: 877972942}
+  videoPt: {fileID: 32900000, guid: 6a085a0659e34fa4eb4e808f4239695a, type: 3}
+  videoEn: {fileID: 32900000, guid: 348518350eca2174f869902ea415646d, type: 3}
+  videoEs: {fileID: 32900000, guid: 348518350eca2174f869902ea415646d, type: 3}
   nextSceneName: Fase 1
   botaoPausa: {fileID: 1156206909}
   botaoResumir: {fileID: 1323310491}
