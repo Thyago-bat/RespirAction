@@ -356,8 +356,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tooltipName: "Hiato A\xF3rtico"
+  tooltipNameEng: Aortic Hiatus
+  tooltipNameEsp: "Hiato A\xF3rtico"
   description: "Por aqui passa a aorta, principal art\xE9ria onde flui sangue oxigenado
     do cora\xE7\xE3o para o corpo."
+  descriptionEng: The aorta passes through here, the main artery through which oxygenated
+    blood flows from the heart to the body.
+  descriptionEsp: "Por aqu\xED pasa la aorta, la principal arteria por la que fluye
+    la sangre oxigenada del coraz\xF3n hacia el cuerpo."
   audioNum: 4
 --- !u!1 &235885384
 GameObject:
@@ -885,6 +891,7 @@ GameObject:
   - component: {fileID: 737890431}
   - component: {fileID: 737890433}
   - component: {fileID: 737890432}
+  - component: {fileID: 737890434}
   m_Layer: 5
   m_Name: TopTxt
   m_TagString: Untagged
@@ -1011,6 +1018,46 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 737890430}
   m_CullTransparentMesh: 1
+--- !u!114 &737890434
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 737890430}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 56eb0353ae6e5124bb35b17aff880f16, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_StringReference:
+    m_TableReference:
+      m_TableCollectionName: GUID:9fd509b263488b943ba7df28ae59ffae
+    m_TableEntryReference:
+      m_KeyId: 31627214692352
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  m_FormatArguments: []
+  m_UpdateString:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 737890432}
+        m_TargetAssemblyTypeName: TMPro.TMP_Text, Unity.TextMeshPro
+        m_MethodName: set_text
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 1
+  references:
+    version: 2
+    RefIds: []
 --- !u!1 &786116812
 GameObject:
   m_ObjectHideFlags: 0
@@ -1057,8 +1104,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::InteractablePart
   tooltipName: "Hiato Esof\xE1gico"
+  tooltipNameEng: Esophageal Hiatus
+  tooltipNameEsp: "Hiato Esof\xE1gico"
   description: "O hiato esof\xE1gico permite a passagem do es\xF4fago, que conduz
     o alimento at\xE9 o est\xF4mago."
+  descriptionEng: The esophageal hiatus allows the passage of the esophagus, which
+    carries food to the stomach.
+  descriptionEsp: "El hiato esof\xE1gico permite el paso del es\xF3fago, el cual
+    conduce los alimentos hasta el est\xF3mago."
   audioNum: 3
 --- !u!135 &786116815
 SphereCollider:
@@ -2044,6 +2097,7 @@ GameObject:
   - component: {fileID: 1772381569}
   - component: {fileID: 1772381571}
   - component: {fileID: 1772381570}
+  - component: {fileID: 1772381572}
   m_Layer: 5
   m_Name: BotTxt
   m_TagString: Untagged
@@ -2169,6 +2223,46 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1772381568}
   m_CullTransparentMesh: 1
+--- !u!114 &1772381572
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1772381568}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 56eb0353ae6e5124bb35b17aff880f16, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_StringReference:
+    m_TableReference:
+      m_TableCollectionName: GUID:9fd509b263488b943ba7df28ae59ffae
+    m_TableEntryReference:
+      m_KeyId: 31329326833664
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  m_FormatArguments: []
+  m_UpdateString:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1772381570}
+        m_TargetAssemblyTypeName: TMPro.TMP_Text, Unity.TextMeshPro
+        m_MethodName: set_text
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 1
+  references:
+    version: 2
+    RefIds: []
 --- !u!1 &1884756919
 GameObject:
   m_ObjectHideFlags: 0
@@ -2215,8 +2309,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::InteractablePart
   tooltipName: Hiato da Veia Cava
+  tooltipNameEng: Vena Cava Hiatus
+  tooltipNameEsp: Hiato Cava
   description: "Aqui passa a veia cava inferior, principal veia onde flui sangue
     desoxigenadodo corpo para o cora\xE7\xE3o."
+  descriptionEng: The inferior vena cava passes through here, the main vein through
+    which deoxygenated blood flows from the body to the heart.
+  descriptionEsp: "Por aqu\xED pasa la vena cava inferior, la principal vena por
+    donde fluye la sangre desoxigenada del cuerpo hacia el coraz\xF3n."
   audioNum: 2
 --- !u!135 &1884756922
 SphereCollider:

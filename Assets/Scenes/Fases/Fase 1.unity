@@ -1537,6 +1537,7 @@ GameObject:
   - component: {fileID: 533512839}
   - component: {fileID: 533512841}
   - component: {fileID: 533512840}
+  - component: {fileID: 533512842}
   m_Layer: 5
   m_Name: 1
   m_TagString: Untagged
@@ -1663,6 +1664,46 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 533512838}
   m_CullTransparentMesh: 1
+--- !u!114 &533512842
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 533512838}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 56eb0353ae6e5124bb35b17aff880f16, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_StringReference:
+    m_TableReference:
+      m_TableCollectionName: GUID:9fd509b263488b943ba7df28ae59ffae
+    m_TableEntryReference:
+      m_KeyId: 5320837799936
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  m_FormatArguments: []
+  m_UpdateString:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 533512840}
+        m_TargetAssemblyTypeName: TMPro.TMP_Text, Unity.TextMeshPro
+        m_MethodName: set_text
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 1
+  references:
+    version: 2
+    RefIds: []
 --- !u!1 &552246934 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 279419076694195428eccfdd212dae64, type: 3}
@@ -3658,21 +3699,54 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogue:
-  - "Acertou!  A por\xE7\xE3o esternal do diafragma se conecta ao processo xifoide,
-    ajudando na respira\xE7\xE3o eficiente"
-  - "Excelente! As fun\xE7\xF5es respirat\xF3rias e de barreira do diafragma s\xE3o
-    realizadas principalmente pelo m\xFAsculo costal. "
-  - "Acertou! O Tend\xE3o Central atua como ponto de ancoragem, fundamental para
-    a contra\xE7\xE3o do diafragma!"
-  - "Excelente! As fun\xE7\xF5es respirat\xF3rias e de barreira do diafragma s\xE3o
-    realizadas principalmente pelo m\xFAsculo costal. "
-  - "Boa escolha! A regi\xE3o Lombar ou tamb\xE9m denominada Crural foi capturada
-    corretamente!"
+  - m_TableReference:
+      m_TableCollectionName: GUID:9fd509b263488b943ba7df28ae59ffae
+    m_TableEntryReference:
+      m_KeyId: 15781437440
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  - m_TableReference:
+      m_TableCollectionName: GUID:9fd509b263488b943ba7df28ae59ffae
+    m_TableEntryReference:
+      m_KeyId: 18797142016
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  - m_TableReference:
+      m_TableCollectionName: GUID:9fd509b263488b943ba7df28ae59ffae
+    m_TableEntryReference:
+      m_KeyId: 21481496576
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  - m_TableReference:
+      m_TableCollectionName: GUID:9fd509b263488b943ba7df28ae59ffae
+    m_TableEntryReference:
+      m_KeyId: 28351766528
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  - m_TableReference:
+      m_TableCollectionName: GUID:9fd509b263488b943ba7df28ae59ffae
+    m_TableEntryReference:
+      m_KeyId: 1642579992576
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
   dialogueIndex: 0
   dialoguePanel: {fileID: 1915593055}
   dialogueText: {fileID: 2118946178}
   startDialogue: 0
   readyDialogue: 0
+  references:
+    version: 2
+    RefIds: []
 --- !u!4 &1386363381
 Transform:
   m_ObjectHideFlags: 0
