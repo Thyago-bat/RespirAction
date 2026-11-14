@@ -3593,6 +3593,7 @@ MonoBehaviour:
   botaoContinuar: {fileID: 1801793148}
   corCorreto: {r: 0.21894623, g: 0.6075471, b: 0.21894623, a: 1}
   corIncorreto: {r: 0.6679245, g: 0.13988608, b: 0.13988608, a: 1}
+  cenaAoTerminar: MenuFasesNovo
 --- !u!1 &1469788520
 GameObject:
   m_ObjectHideFlags: 0

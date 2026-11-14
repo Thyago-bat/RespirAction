@@ -34,6 +34,13 @@ public class VideoPlayerScript : MonoBehaviour
             yield break;
         }
 
+        // Cenas antigas nao tem o video em portugues preenchido no Inspector.
+        // Nesse caso, usa o video que ja esta no proprio componente VideoPlayer.
+        if (videoPt == null)
+        {
+            videoPt = videoPlayer.clip;
+        }
+
         // Espera o sistema de Localization terminar de iniciar para saber o idioma
         yield return LocalizationSettings.InitializationOperation;
 

@@ -60,7 +60,14 @@ public class PauseMenu : MonoBehaviour
         Debug.Log("[MENU] Reiniciando fase (carregando cena " + cenaRestart + ")");
         audioManagerMenu.PlaySelectSound();
         Time.timeScale = 1f;
-        SceneManager.LoadScene(cenaRestart);
+        string cena = cenaRestart;
+        // Se o nome da cena estiver vazio ou errado (ex.: "Fase1" em vez de "Fase 1"),
+        // reinicia a propria cena que esta aberta
+        if (string.IsNullOrEmpty(cena) || !Application.CanStreamedLevelBeLoaded(cena))
+        {
+            cena = SceneManager.GetActiveScene().name;
+        }
+        SceneManager.LoadScene(cena);
     }
 
     public void Home()

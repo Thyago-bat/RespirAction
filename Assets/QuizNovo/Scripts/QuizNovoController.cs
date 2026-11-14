@@ -1,6 +1,7 @@
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class QuizNovoController : MonoBehaviour
 {
@@ -31,6 +32,10 @@ public class QuizNovoController : MonoBehaviour
     [SerializeField] private Button botaoContinuar;
     [SerializeField] private Color corCorreto = Color.green;
     [SerializeField] private Color corIncorreto = Color.red;
+
+    [Header("Fim do quiz")]
+    [Tooltip("Cena que abre depois da ultima pergunta (ex.: MenuFasesQuizNovo ou MenuFasesNovo)")]
+    [SerializeField] private string cenaAoTerminar = "MenuFasesQuizNovo";
 
     private int indiceQuestaoAtual;
     private int indiceAlternativaAtual;
@@ -197,6 +202,12 @@ public class QuizNovoController : MonoBehaviour
         }
 
         Debug.Log("Quiz concluído.");
+
+        // Volta para a tela de selecao depois da ultima pergunta
+        if (!string.IsNullOrEmpty(cenaAoTerminar))
+        {
+            SceneManager.LoadScene(cenaAoTerminar);
+        }
     }
 
     public void DefinirQuestao(int indice)

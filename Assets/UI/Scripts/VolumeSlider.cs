@@ -29,14 +29,26 @@ public class VolumeSlider : MonoBehaviour
     public void ChangeMusicVolume()
     {
         Debug.Log("[AUDIO] valor do volume de musica alterado para " + musicVolSlider.value);
-        myMixer.SetFloat("MusicVol", musicVolSlider.value);
+        float valor = musicVolSlider.value;
+        // No minimo do slider, silencia de verdade (-80 dB = mudo)
+        if (valor <= musicVolSlider.minValue)
+        {
+            valor = -80f;
+        }
+        myMixer.SetFloat("MusicVol", valor);
         PlayerPrefs.SetFloat("musicVolume", musicVolSlider.value);
     }
 
     public void ChangeSoundVolume()
     {
         Debug.Log("[AUDIO] valor do volume de som alterado para " +  soundVolSlider.value);
-        myMixer.SetFloat("SoundVol", soundVolSlider.value);
+        float valor = soundVolSlider.value;
+        // No minimo do slider, silencia de verdade (-80 dB = mudo)
+        if (valor <= soundVolSlider.minValue)
+        {
+            valor = -80f;
+        }
+        myMixer.SetFloat("SoundVol", valor);
         PlayerPrefs.SetFloat("soundVolume", soundVolSlider.value);
     }
 

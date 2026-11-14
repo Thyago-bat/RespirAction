@@ -1,7 +1,6 @@
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
-using NUnit.Framework;
 using System.Collections.Generic;
 
 public class ScreenManager : MonoBehaviour
@@ -12,21 +11,21 @@ public class ScreenManager : MonoBehaviour
     [Tooltip("Toggle da tela cheia")]
     [SerializeField] private Toggle fullscreenToggle;
 
-    [Tooltip("Menu em cascata da resolução")]
+    [Tooltip("Menu em cascata da resolucao")]
     [SerializeField] private TMP_Dropdown resDropDown;
 
-    [Tooltip("Largura resolução")]
+    [Tooltip("Largura resolucao")]
     [SerializeField] private int resWidth = 1920;
-    [Tooltip("Altura resolução")]
+    [Tooltip("Altura resolucao")]
     [SerializeField] private int resHeight = 1080;
 
-    // Matriz de todas resoluções
+    // Matriz de todas resolucoes
     private Resolution[] resArray;
-    // fullscreen ativado ou não
+    // fullscreen ativado ou nao
     private bool isFullScreen = false;
-    // resolução selecionada
+    // resolucao selecionada
     private int dropdownIndex;
-    
+
 
     void Start()
     {
@@ -47,11 +46,6 @@ public class ScreenManager : MonoBehaviour
         else
             resHeight = PlayerPrefs.GetInt("resHeight");
 
-        if (!PlayerPrefs.HasKey("screenDDIndex"))
-            PlayerPrefs.SetInt("screenDDIndex", dropdownIndex);
-        else
-            dropdownIndex = PlayerPrefs.GetInt("screenDDIndex");
-
         // inicializando array de resolucoes
 
         resArray = Screen.resolutions;
@@ -62,13 +56,40 @@ public class ScreenManager : MonoBehaviour
             resStringList.Add(res.ToString());
         }
 
+        resDropDown.ClearOptions();
         resDropDown.AddOptions(resStringList);
 
+        // escolhendo qual resolucao fica marcada no menu
+
+        if (PlayerPrefs.HasKey("screenDDIndex"))
+        {
+            dropdownIndex = PlayerPrefs.GetInt("screenDDIndex");
+        }
+        else
+        {
+            // Primeira vez: marca a resolucao atual da tela,
+            // e nao a primeira da lista (que e a menor de todas)
+            dropdownIndex = resArray.Length - 1;
+            for (int i = 0; i < resArray.Length; i++)
+            {
+                if (resArray[i].width == Screen.currentResolution.width &&
+                    resArray[i].height == Screen.currentResolution.height)
+                {
+                    dropdownIndex = i;
+                }
+            }
+            PlayerPrefs.SetInt("screenDDIndex", dropdownIndex);
+        }
+
+        // Garante que a posicao existe neste monitor
+        if (dropdownIndex < 0 || dropdownIndex >= resArray.Length)
+            dropdownIndex = resArray.Length - 1;
+
         // alterando o menu de opcoes basedo nos player prefs
+        // (sem disparar SetRes / SetFullScreen so por abrir a tela)
 
-        fullscreenToggle.isOn = isFullScreen;
-        resDropDown.value = dropdownIndex;
-
+        fullscreenToggle.SetIsOnWithoutNotify(isFullScreen);
+        resDropDown.SetValueWithoutNotify(dropdownIndex);
     }
 
     public void SetRes()
@@ -87,7 +108,7 @@ public class ScreenManager : MonoBehaviour
         PlayerPrefs.SetInt("resHeight", resHeight);
         PlayerPrefs.SetInt("screenDDIndex", dropdownIndex);
 
-        Debug.Log("[TELA] Nova resolução: " + resWidth + " x " + resHeight);
+        Debug.Log("[TELA] Nova resolucao: " + resWidth + " x " + resHeight);
         Debug.Log("[TELA] ScreenDDIndex guardado na pos " + dropdownIndex);
     }
 
