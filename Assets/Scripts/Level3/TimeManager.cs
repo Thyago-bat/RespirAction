@@ -8,6 +8,7 @@ public class TimeManager : MonoBehaviour
     public float elapsedTime;                       // tempo em segundos (float)
     public float timeSineWave;                      // tempo na funcao seno
     public float sineSpeedDiv = (float)Math.PI/2;   // velocidade do seno (menor num = mais veloz)
+    public bool isRunning = true;
 
     public event Action<float> OnMinutePassed;      // evento para cada minuto
 
@@ -31,6 +32,7 @@ public class TimeManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (!isRunning) return;
         // Update the elapsed time every frame, independent of CPU performance.
         elapsedTime += Time.deltaTime;
         timeSineWave = (float)Math.Sin((elapsedTime / sineSpeedDiv));
@@ -41,4 +43,9 @@ public class TimeManager : MonoBehaviour
             minuteCheck += 60f; // Set next minute threshold
         }
     }
+    public void SetRunning(bool running)
+    {
+        isRunning = running;
+    }
+
 }

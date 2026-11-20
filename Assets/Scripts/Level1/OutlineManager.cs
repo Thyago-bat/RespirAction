@@ -20,7 +20,9 @@ public class OutlineManager : MonoBehaviour
 
     void Update()
     {
-        if (move3D.currentSnap && outline)
+        if (move3D != null && move3D.currentSnap && outline && correctSnap != null &&
+            levelManager != null && levelManager.IsAssemblyPiece(gameObject) &&
+            move3D.currentSnap == correctSnap)
         {
             outline.OutlineWidth = 7f;
 

@@ -6,12 +6,15 @@ public class RotationManager : MonoBehaviour
     public float rotationSpeed = 1f;
     
     private Transform selectedObject;
+    private TutorialFlow tutorialFlow;
     
     // A rotação alvo do objeto selecionado
     private Quaternion targetRotation;
 
     void Update()
     {
+        if (tutorialFlow == null)
+            tutorialFlow = FindFirstObjectByType<TutorialFlow>();
         // Lógica de Seleção 
         if (Input.GetMouseButtonDown(0))
         {
@@ -21,7 +24,7 @@ public class RotationManager : MonoBehaviour
             if (Physics.Raycast(ray, out hit))
             {
                 // verifica se o objeto clicado tem a tag "Peca"
-                if (hit.transform.CompareTag("Peca"))
+                if (hit.transform.CompareTag("Peca") && CanRotate(hit.transform))
                 {
                     // Se sim, ele se torna o objeto selecionado
                     selectedObject = hit.transform;
@@ -34,6 +37,11 @@ public class RotationManager : MonoBehaviour
         // Lógica de Rotação 
         if (selectedObject != null)
         {
+            if (!CanRotate(selectedObject))
+            {
+                selectedObject = null;
+                return;
+            }
             // armazenar o incremento da rotação em um único frame
             Quaternion rotationDelta = Quaternion.identity;
 
@@ -41,12 +49,12 @@ public class RotationManager : MonoBehaviour
             if (Input.GetKey(KeyCode.LeftArrow))
             {
                 // Gira 90 graus em torno do eixo Y (Vector3.up)
-                rotationDelta = Quaternion.AngleAxis(-5, Vector3.up);
+                rotationDelta = Quaternion.AngleAxis(-2, Vector3.up);
             }
             else if (Input.GetKey(KeyCode.RightArrow))
             {
                 // Gira -90 graus em torno do eixo Y (Vector3.up)
-                rotationDelta = Quaternion.AngleAxis(5, Vector3.up);
+                rotationDelta = Quaternion.AngleAxis(2, Vector3.up);
             }
             // Rotação Vertical
             // DESABILITADO POR DIFICULDADE
@@ -72,5 +80,15 @@ public class RotationManager : MonoBehaviour
             // O objeto só se move quando a rotação alvo é diferente da rotação atual.
             selectedObject.rotation = Quaternion.Slerp(selectedObject.rotation, targetRotation, rotationSpeed * Time.deltaTime);
         }
+    }
+
+    private bool CanRotate(Transform piece)
+    {
+        Move3D move = piece.GetComponent<Move3D>();
+        if (move == null)
+            move = piece.GetComponentInParent<Move3D>();
+
+        return move != null && move.enabled &&
+            (tutorialFlow == null || tutorialFlow.CanRotate(piece.gameObject));
     }
 }

@@ -19,6 +19,8 @@ public class Move3D : MonoBehaviour
 
     public GameObject audioManager;
 
+    private TutorialFlow tutorialFlow;
+
     void Start()
     {
         mainCamera = Camera.main;
@@ -43,12 +45,19 @@ public class Move3D : MonoBehaviour
             {
                 playAnimation = false;
                 transform.position = targetPosition;
+
+                LevelManager levelManager = FindFirstObjectByType<LevelManager>();
+                if (levelManager != null)
+                    levelManager.OnPieceSettled(gameObject);
             }
         }
     }
 
     void OnMouseDrag()
     {
+        if (!CanReceivePlayerInput())
+            return;
+
         // Conversões de posição em tela para posição global para simular
         // o movimento da peça junto do mouse quando clicar e segurar
         // um pouquinho complexo, depois me pergunta que eu passo o vídeo
@@ -67,6 +76,9 @@ public class Move3D : MonoBehaviour
 
     private void OnMouseDown()
     {
+        if (!CanReceivePlayerInput())
+            return;
+
         if (currentSnap)
         {
             currentSnap.GetComponent<SnapArea>().currentObject = null;
@@ -81,6 +93,9 @@ public class Move3D : MonoBehaviour
 
     private void OnMouseUp()
     {
+        if (!CanReceivePlayerInput())
+            return;
+
         // quando solta o mouse, verifica se a peça está dentro de um snap
         // se o snap estiver ocupado, manda para a posição inicial
         // se o snap estiver disponível, manda para o centro do snap
@@ -110,6 +125,18 @@ public class Move3D : MonoBehaviour
             Debug.Log("MISSING AUDIO MANAGER");
 
         playAnimation = true;
+    }
+
+    private bool CanReceivePlayerInput()
+    {
+        // Confere o bloqueio antes de qualquer alteração causada pelo mouse.
+        if (!isActiveAndEnabled)
+            return false;
+
+        if (tutorialFlow == null)
+            tutorialFlow = FindFirstObjectByType<TutorialFlow>();
+
+        return tutorialFlow == null || tutorialFlow.CanInteract(gameObject);
     }
 
     private GameObject findClosestSnap(Vector3 objPos)

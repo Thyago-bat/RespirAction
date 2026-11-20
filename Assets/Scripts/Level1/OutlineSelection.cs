@@ -9,9 +9,13 @@ public class OutlineSelection : MonoBehaviour
     private Transform highlight;
     private Transform selection;
     private RaycastHit raycastHit;
+    private TutorialFlow tutorialFlow;
 
     void Update()
     {
+        if (tutorialFlow == null)
+            tutorialFlow = FindFirstObjectByType<TutorialFlow>();
+
         // Highlight
         if (highlight != null)
         {
@@ -22,7 +26,9 @@ public class OutlineSelection : MonoBehaviour
         if (!EventSystem.current.IsPointerOverGameObject() && Physics.Raycast(ray, out raycastHit)) //Make sure you have EventSystem in the hierarchy before using EventSystem
         {
             highlight = raycastHit.transform;
-            if (highlight.CompareTag("peca") && highlight != selection)
+            bool isPiece = highlight.CompareTag(tutorialFlow != null ? "Peca" : "peca");
+            if (isPiece && highlight != selection &&
+                (tutorialFlow == null || tutorialFlow.CanInteract(highlight.gameObject)))
             {
                 if (highlight.gameObject.GetComponent<Outline>() != null)
                 {
@@ -49,7 +55,9 @@ public class OutlineSelection : MonoBehaviour
             {
                 if (selection != null)
                 {
-                    selection.gameObject.GetComponent<Outline>().enabled = false;
+                    Outline selectedOutline = selection.gameObject.GetComponent<Outline>();
+                    if (selectedOutline != null)
+                        selectedOutline.enabled = false;
                 }
                 selection = raycastHit.transform;
                 selection.gameObject.GetComponent<Outline>().enabled = true;
@@ -59,7 +67,9 @@ public class OutlineSelection : MonoBehaviour
             {
                 if (selection)
                 {
-                    selection.gameObject.GetComponent<Outline>().enabled = false;
+                    Outline selectedOutline = selection.gameObject.GetComponent<Outline>();
+                    if (selectedOutline != null)
+                        selectedOutline.enabled = false;
                     selection = null;
                 }
             }

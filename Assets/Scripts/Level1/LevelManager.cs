@@ -3,6 +3,7 @@ using System.Collections;
 using UnityEngine.Audio;
 using Unity.VisualScripting;
 using UnityEngine.SceneManagement;
+using System;
 
 
 public class LevelManager : MonoBehaviour
@@ -25,6 +26,8 @@ public class LevelManager : MonoBehaviour
     [SerializeField] private float diafragmaDelay = 2.0f;
 
     public int gameStatus;
+    [Header("Tutorial")]
+    public bool tutorialMode;
 
     private void findObjects()
     {
@@ -67,6 +70,47 @@ public class LevelManager : MonoBehaviour
         else return 0;
     }
 
+    public bool IsAssemblyPiece(GameObject piece)
+    {
+        return pieceArray != null && Array.IndexOf(pieceArray, piece) >= 0;
+    }
+
+    public void OnPieceSettled(GameObject piece)
+    {
+        // Peças distratoras não recebem balões de erro.
+        if (!IsAssemblyPiece(piece))
+            return;
+
+        Move3D move = piece.GetComponent<Move3D>();
+        if (move == null || move.currentSnap == null)
+            return;
+
+        int index = Array.IndexOf(pieceArray, piece);
+        // Os avisos de local incorreto fazem parte somente do tutorial do Esternal.
+        // As outras peças válidas falam apenas ao serem encaixadas corretamente,
+        // pelo fluxo normal de diálogo em Update().
+        if (index != 0)
+            return;
+
+        int status = IsPieceCorrect(piece, snapArray[index], 0.1f, 25f);
+        TutorialFlow tutorial = FindFirstObjectByType<TutorialFlow>();
+
+        if (status == 0)
+        {
+            if (tutorial != null)
+                tutorial.ShowPlacementFeedback(11);
+            else if (dialogue != null)
+                dialogue.ShowTutorialLine(11, false);
+        }
+        else if (status == 1)
+        {
+            if (tutorial != null)
+                tutorial.ShowPlacementFeedback(12);
+            else if (dialogue != null)
+                dialogue.ShowTutorialLine(12, false);
+        }
+    }
+
     private void Start()
     {
         findObjects();
@@ -82,6 +126,10 @@ public class LevelManager : MonoBehaviour
         {
             dialogueLido[i] = false;
         }
+
+        // A fala da Esternal é apresentada pelo tutorial quando a sequência termina.
+        if (tutorialMode)
+            dialogueLido[0] = true;
     }
 
     private void Update()
@@ -100,9 +148,9 @@ public class LevelManager : MonoBehaviour
         {
             if (pieceStatusArray[i] == 2 && !dialogueLido[i])
             {
-                dialogue.dialogueIndex = i;
-                dialogue.readyDialogue = true;
                 dialogueLido[i] = true;
+                if (dialogue != null)
+                    dialogue.ShowTutorialLine(i, false);
 
                 if (audioManager)
                     audioManager.GetComponent<AudioManagerScene>().PlaySound(2);
@@ -149,6 +197,11 @@ public class LevelManager : MonoBehaviour
     private IEnumerator LoadSceneWithDelay()
     {
         yield return new WaitForSeconds(diafragmaDelay);
+        // Aguarda a digitação e o fechamento de todos os balões enfileirados
+        // antes de trocar para a cena de finalização.
+        if (dialogue != null)
+            yield return new WaitUntil(() => dialogue.IsIdle);
+
         SceneManager.LoadScene(nomeProximaCena);
     }
 }

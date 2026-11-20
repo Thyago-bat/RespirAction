@@ -61,18 +61,62 @@ public class PieceManager : MonoBehaviour
     private void Start()
     {
         pieceArray = GameObject.FindGameObjectsWithTag("Peca");
-        //for (int i = 0; i < pieceArray.Length; i++)
-        //    Debug.Log(pieceArray[i].name);
+        Vector3[] spawnPositions = initializeTransforms();
+        GameObject sternal = null;
 
-        Vector3[] transformArray = initializeTransforms();
-
-        shuffleTransforms(transformArray);
-
-        for (int i = 0; i < 12; i++)
+        foreach (GameObject piece in pieceArray)
         {
-            pieceArray[i].transform.position = transformArray[i];
-            pieceArray[i].GetComponent<Move3D>().startPosition = transformArray[i];
-            shuffleRotation(pieceArray[i]);
+            if (piece != null && piece.name == "Esternal")
+            {
+                sternal = piece;
+                break;
+            }
+        }
+
+        if (sternal == null || pieceArray.Length != spawnPositions.Length)
+        {
+            Debug.LogError("PieceManager: eram esperadas 12 peças com a peça Esternal.", this);
+            return;
+        }
+
+        // Reserve sempre a primeira posição da grade para o Esternal. As demais
+        // continuam sendo distribuídas aleatoriamente entre as outras peças.
+        sternal.transform.position = spawnPositions[0];
+        Move3D sternalMove = sternal.GetComponent<Move3D>();
+        if (sternalMove != null)
+            sternalMove.startPosition = spawnPositions[0];
+
+        OutlineManager sternalOutline = sternal.GetComponent<OutlineManager>();
+        if (sternalOutline != null && sternalOutline.correctSnap != null)
+        {
+            // Começa sempre 90 graus fora da rotação correta, exigindo que o
+            // jogador use uma das setas durante o tutorial.
+            sternal.transform.rotation = Quaternion.AngleAxis(90f, Vector3.up) *
+                sternalOutline.correctSnap.transform.rotation;
+        }
+        else
+        {
+            Debug.LogError("PieceManager: o Esternal precisa ter OutlineManager com correctSnap configurado.", sternal);
+            return;
+        }
+
+        Vector3[] otherPositions = new Vector3[spawnPositions.Length - 1];
+        for (int i = 1; i < spawnPositions.Length; i++)
+            otherPositions[i - 1] = spawnPositions[i];
+        shuffleTransforms(otherPositions);
+
+        int positionIndex = 0;
+        foreach (GameObject piece in pieceArray)
+        {
+            if (piece == null || piece == sternal)
+                continue;
+
+            Vector3 position = otherPositions[positionIndex++];
+            piece.transform.position = position;
+            Move3D move = piece.GetComponent<Move3D>();
+            if (move != null)
+                move.startPosition = position;
+            shuffleRotation(piece);
         }
     }
 }
