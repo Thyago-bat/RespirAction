@@ -144,6 +144,9 @@ EditorBuildSettings:
     path: Assets/QuizNovo/Scenes/QuizNovoFase4.unity
     guid: 3b20297860c9f0f4c980a06d058d5c66
   - enabled: 1
+    path: Assets/Scenes/Fases/Fase1_Tutorial.unity
+    guid: aea4f3380fbb66c499f54341dc1108e8
+  - enabled: 1
     path: Assets/QuizNovo/Scenes/QuizNovoFase3.unity
     guid: e3504ec59ada0924293d67ba42f5777d
   - enabled: 1

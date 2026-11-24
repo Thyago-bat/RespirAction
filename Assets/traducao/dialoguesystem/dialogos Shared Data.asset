@@ -39,6 +39,42 @@ MonoBehaviour:
     m_Key: Arraste e encaixe
     m_Metadata:
       m_Items: []
+  - m_Id: 5320837799937
+    m_Key: tutorial_arrastar_esternal
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5320837799938
+    m_Key: tutorial_rotacionar_esternal
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5320837799939
+    m_Key: tutorial_validar_esternal
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5320837799940
+    m_Key: tutorial_selecionar_esternal
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5320837799941
+    m_Key: tutorial_peca_ficara_verde
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5320837799942
+    m_Key: tutorial_escolher_proxima_peca
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5320837799943
+    m_Key: feedback_peca_local_errado
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5320837799944
+    m_Key: feedback_peca_girar
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5320837799945
+    m_Key: feedback_distrator
+    m_Metadata:
+      m_Items: []
   - m_Id: 15622979559424
     m_Key: continuar
     m_Metadata:

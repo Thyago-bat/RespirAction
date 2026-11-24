@@ -525,7 +525,7 @@ MonoBehaviour:
   videoPt: {fileID: 32900000, guid: 6a085a0659e34fa4eb4e808f4239695a, type: 3}
   videoEn: {fileID: 32900000, guid: 348518350eca2174f869902ea415646d, type: 3}
   videoEs: {fileID: 32900000, guid: 348518350eca2174f869902ea415646d, type: 3}
-  nextSceneName: Fase 1
+  nextSceneName: Fase1_Tutorial
   botaoPausa: {fileID: 1156206909}
   botaoResumir: {fileID: 1323310491}
 --- !u!1 &985910829
@@ -1376,7 +1376,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c3452f7d2375c554ab816f3bdc108848, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cenaPosterior: Fase 1
+  cenaPosterior: Fase1_Tutorial
   cenaAnterior: Menu
   cenaBotao1: 
   cenaBotao2: 

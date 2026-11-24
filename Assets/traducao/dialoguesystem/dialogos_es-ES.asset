@@ -19,13 +19,14 @@ MonoBehaviour:
     m_Items: []
   m_TableData:
   - m_Id: 15781437440
-    m_Localized: "\xA1Correcto! La porci\xF3n esternal del diafragma se conecta con
-      el proceso xifoides, \xA1lo que ayuda a respirar de forma eficiente!"
+    m_Localized: "\xA1Muy bien! La porci\xF3n esternal del diafragma se origina en
+      la cara posterior del proceso xifoides del estern\xF3n."
     m_Metadata:
       m_Items: []
   - m_Id: 18797142016
-    m_Localized: "\xA1Excelente! Las funciones respiratorias y de barrera del diafragma
-      las realiza principalmente el m\xFAsculo costal."
+    m_Localized: "\xA1Excelente! Las porciones costales del diafragma se originan
+      en las costillas inferiores, y sus fibras musculares convergen en el tend\xF3n
+      central."
     m_Metadata:
       m_Items: []
   - m_Id: 21481496576
@@ -34,8 +35,9 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 28351766528
-    m_Localized: "\xA1Excelente! Las funciones respiratorias y de barrera del diafragma
-      las realiza principalmente el m\xFAsculo costal."
+    m_Localized: "\xA1Excelente! Las porciones costales del diafragma se originan
+      en las costillas inferiores, y sus fibras musculares convergen en el tend\xF3n
+      central."
     m_Metadata:
       m_Items: []
   - m_Id: 1642579992576
@@ -44,10 +46,48 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 5320837799936
-    m_Localized: 'Arrastra y encaja las piezas correctas.
-
-      Gira la pieza hasta
-      que se ponga verde.'
+    m_Localized: Arrastra y encaja las piezas correctas. Gira cada pieza hasta que
+      se ponga verde.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5320837799937
+    m_Localized: "Mant\xE9n pulsado el bot\xF3n izquierdo del rat\xF3n y arrastra
+      la pieza Esternal hasta la posici\xF3n correspondiente."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5320837799938
+    m_Localized: Haz clic de nuevo en Esternal para seleccionarla y usa la flecha
+      izquierda o derecha para girar la pieza.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5320837799939
+    m_Localized: "Ajusta la posici\xF3n y la rotaci\xF3n de la pieza; cuando est\xE9
+      correctamente encajada, su contorno se pondr\xE1 verde."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5320837799940
+    m_Localized: Haz clic en la pieza Esternal para seleccionarla.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5320837799941
+    m_Localized: "Cuando la pieza est\xE9 correctamente encajada, se pondr\xE1 verde."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5320837799942
+    m_Localized: "Ahora, elige otra pieza y col\xF3cala en la posici\xF3n correspondiente."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5320837799943
+    m_Localized: Pieza correcta, pero en el lugar equivocado. Prueba en otro lugar.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5320837799944
+    m_Localized: "Pieza correcta en el lugar correcto. Ahora solo falta girarla hasta
+      la orientaci\xF3n correcta."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5320837799945
+    m_Localized: "Pieza incorrecta. No forma parte del diafragma."
     m_Metadata:
       m_Items: []
   - m_Id: 15622979559424

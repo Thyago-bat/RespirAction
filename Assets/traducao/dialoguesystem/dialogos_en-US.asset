@@ -19,13 +19,13 @@ MonoBehaviour:
     m_Items: []
   m_TableData:
   - m_Id: 15781437440
-    m_Localized: Correct! The sternal part of the diaphragm connects to the xiphoid
-      process, helping you breathe efficiently!
+    m_Localized: Well done! The sternal portion of the diaphragm originates from
+      the posterior surface of the xiphoid process of the sternum.
     m_Metadata:
       m_Items: []
   - m_Id: 18797142016
-    m_Localized: Excellent! The diaphragm's breathing and barrier functions are performed
-      mainly by the costal muscle.
+    m_Localized: Excellent! The costal portions of the diaphragm originate from the
+      lower ribs, and their muscle fibers converge at the central tendon.
     m_Metadata:
       m_Items: []
   - m_Id: 21481496576
@@ -34,8 +34,8 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 28351766528
-    m_Localized: Excellent! The diaphragm's breathing and barrier functions are performed
-      mainly by the costal muscle.
+    m_Localized: Excellent! The costal portions of the diaphragm originate from the
+      lower ribs, and their muscle fibers converge at the central tendon.
     m_Metadata:
       m_Items: []
   - m_Id: 1642579992576
@@ -44,10 +44,48 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 5320837799936
-    m_Localized: 'Drag and snap the right pieces into place.
-
-      Rotate the piece
-      until it turns green.'
+    m_Localized: Drag and snap the correct pieces into place. Rotate each piece until
+      it turns green.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5320837799937
+    m_Localized: Hold the left mouse button and drag Esternal to the corresponding
+      position.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5320837799938
+    m_Localized: Click Esternal again to select it, then use the left or right arrow
+      key to rotate the piece.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5320837799939
+    m_Localized: Adjust the position and rotation of the piece; once it is correctly
+      fitted, its outline will turn green.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5320837799940
+    m_Localized: Click the Esternal piece to select it.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5320837799941
+    m_Localized: When the piece is correctly snapped into place, it turns green.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5320837799942
+    m_Localized: Now choose another piece and place it in the corresponding position.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5320837799943
+    m_Localized: Correct piece, wrong position. Try another spot.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5320837799944
+    m_Localized: Correct piece in the correct position. Now rotate it to the correct
+      orientation.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5320837799945
+    m_Localized: Incorrect piece. It is not part of the diaphragm.
     m_Metadata:
       m_Items: []
   - m_Id: 15622979559424

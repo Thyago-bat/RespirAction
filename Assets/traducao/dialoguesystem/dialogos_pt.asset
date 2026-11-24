@@ -19,13 +19,13 @@ MonoBehaviour:
     m_Items: []
   m_TableData:
   - m_Id: 15781437440
-    m_Localized: "Acertou!  A por\xE7\xE3o esternal do diafragma se conecta ao processo
-      xifoide, ajudando na respira\xE7\xE3o eficiente."
+    m_Localized: "Muito bem! A por\xE7\xE3o esternal do diafragma tem origem na face posterior
+      do processo xifoide do esterno."
     m_Metadata:
       m_Items: []
   - m_Id: 18797142016
-    m_Localized: "Excelente! As fun\xE7\xF5es respirat\xF3rias e de barreira do diafragma
-      s\xE3o realizadas principalmente pelo m\xFAsculo costal. \r\n"
+    m_Localized: "Excelente! As por\xE7\xF5es costais do diafragma t\xEAm origem nas costelas
+      inferiores, e suas fibras musculares convergem para o tend\xE3o central."
     m_Metadata:
       m_Items: []
   - m_Id: 21481496576
@@ -34,8 +34,8 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 28351766528
-    m_Localized: "Excelente! As fun\xE7\xF5es respirat\xF3rias e de barreira do diafragma
-      s\xE3o realizadas principalmente pelo m\xFAsculo costal. \r\n"
+    m_Localized: "Excelente! As por\xE7\xF5es costais do diafragma t\xEAm origem nas costelas
+      inferiores, e suas fibras musculares convergem para o tend\xE3o central."
     m_Metadata:
       m_Items: []
   - m_Id: 1642579992576
@@ -44,8 +44,46 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 5320837799936
-    m_Localized: "Arraste e encaixe as pe\xE7as certas\r\nGire a pe\xE7a at\xE9 que
-      fique verde"
+    m_Localized: "Arraste e encaixe as pe\xE7as certas. Gire a pe\xE7a at\xE9 que fique verde."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5320837799937
+    m_Localized: "Agora mantenha o bot\xE3o esquerdo do mouse pressionado e arraste a
+      Esternal at\xE9 a \xE1rea de encaixe."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5320837799938
+    m_Localized: "Clique novamente na Esternal para selecion\xE1-la. Use a seta esquerda
+      ou direita para girar a pe\xE7a."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5320837799939
+    m_Localized: "Ajuste a posi\xE7\xE3o e a rota\xE7\xE3o at\xE9 o contorno ficar verde."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5320837799940
+    m_Localized: "Vamos come\xE7ar pela pe\xE7a Esternal. Clique nela para selecion\xE1-la."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5320837799941
+    m_Localized: "Quando a pe\xE7a estiver corretamente encaixada, ela ficar\xE1 verde."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5320837799942
+    m_Localized: "Agora, escolha outra pe\xE7a e encaixe-a na posi\xE7\xE3o correspondente."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5320837799943
+    m_Localized: "Parte correta, mas no local errado. Tente outro local."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5320837799944
+    m_Localized: "Pe\xE7a correta no local correto. Agora s\xF3 falta gir\xE1-la at\xE9 ficar
+      na posi\xE7\xE3o correta."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5320837799945
+    m_Localized: "Pe\xE7a incorreta. Ela n\xE3o faz parte do diafragma."
     m_Metadata:
       m_Items: []
   - m_Id: 15622979559424
@@ -57,13 +95,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 30458320887808
-    m_Localized: "Agora \xE9 importante lembrar que o diafragma precisa permitir
-      a passagem de estruturas vitais entre o t\xF3rax e o abd\xF4men. Tr\xEAs delas
-      s\xE3o especialmente importantes: o es\xF4fago, respons\xE1vel por conduzir
-      o alimento ao est\xF4mago; a aorta, que distribui o sangue arterial para todo
-      o corpo; e a veia cava inferior, que transporta o sangue venoso de volta ao
-      cora\xE7\xE3o.\r\nCada uma dessas estruturas atravessa o diafragma por aberturas
-      espec\xEDficas \u2014 os chamados hiatos."
+    m_Localized: "O diafragma possui aberturas chamadas hiatos.\r\nEssas aberturas s\xE3o essenciais porque permitem a passagem de estruturas entre o t\xF3rax e o abd\xF4men, como o es\xF4fago, a aorta e a veia cava inferior."
     m_Metadata:
       m_Items: []
   - m_Id: 31329326833664
