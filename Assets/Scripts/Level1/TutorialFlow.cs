@@ -197,6 +197,9 @@ public class TutorialFlow : MonoBehaviour
                 pieceCollider.enabled = wasEnabled;
         }
 
+        // Garante que nenhum aviso antigo continue bloqueando o arraste das pecas
+        feedbackShowing = false;
+
         if (TimeManager.instance != null)
             TimeManager.instance.SetRunning(true);
 
@@ -302,9 +305,13 @@ public class TutorialFlow : MonoBehaviour
         if (move == null || !move.enabled)
             return false;
 
+        // Depois do tutorial, todas as pecas podem ser arrastadas
+        if (step == Step.Complete)
+            return true;
+
         if (feedbackShowing)
             return false;
 
-        return step == Step.Complete || move.gameObject == sternal;
+        return move.gameObject == sternal;
     }
 }
